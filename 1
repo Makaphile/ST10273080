@@ -19,4 +19,35 @@ System.out.println("Username successfully captured.");
 System.out.println("Username is not correctly formatted,please ensure that your username contains an underscore and is no more than 5 characters in length.");
   }
  }
+import java.util.regex.*;
+public class PasswordChecker {
+public static void main(String[]args)
+{
+String password = scanner.nextLine;
+if(isValidPassword(password)){
+System.out.println("Password successfully captured ");
+}else{
+System.out.println("Password is not correctly formatted, please ensure that the password contains at least 8 characters, a capital letter, a number and a special character .");
+}
+} 
+public static boolean
+isValidPassword(StringPassword){
+if(password.length()<8){
+return false;
+}
+Pattern capitalPattern =Pattern.compile("[A-Z]");
+Matcher capitalMatcher = capitalPattern.matcher(password);
+if (!capitalMatcher.find()){
+return false;
+}
+Pattern numberPattern = Pattern.compile("\\d");
+Matcher numberMatcher = numberMatcher.matcher (password);
+if(!numberMathcer.find()){
+return false;
+}
+Pattern specialPattern = Pattern.compile("[!@#%$&^(),.?\:"{}<>|]");
+Matcher specialMatcher = specialPattern.Matcher(password);
+if(!specialMatcher.find()){
+return false;
+}
 }

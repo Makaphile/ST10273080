@@ -1,0 +1,61 @@
+import java.util.Scanner;
+
+public class LoginSystem{
+
+public static void main(String[]args)
+{
+
+Scanner input = new Scanner(System.in);
+System.out.print("Username:");
+String username = scanner.nextLine();
+System.out.print("Password:");
+String password = scanner.nextLine();
+
+boolean isValidLogin = false;
+User user = null;
+for(User u : users){
+if
+(u.getUsername().equals(username)&&u.getPassword().equals(password)){
+isValidLogin = true;
+user = u;
+break;
+ }
+}
+
+if (isValidLogin){
+System.out.println("Welcome"+user.getFirstName()+" "+user.LastName+",it is great to see you again.");
+}else{
+System.out.println("Username or password incorrect,please try again.");
+  }
+ }
+}
+
+class User{
+private String username;
+private String firstName;
+private String lastName;
+private String password;
+
+public User(String username,String firstName,String lastName,String password){
+this.username = username;
+this.firstName = firstName;
+this.lastName = lastName;
+this.password = password;
+}
+
+public String getUsername(){
+return username;
+}
+
+public String getFirstName(){
+return firstName;
+}
+
+public String getLastName(){
+return LastName;
+}
+
+public String getPassword(){
+return password;
+}
+}

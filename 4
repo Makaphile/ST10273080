@@ -11,7 +11,6 @@ assertTrue(loginSystem.loginUser(username,password));
 assertEquals("Login successful",loginSystem.returnLoginStatus());
 }
 
--password is too short
 @Test
 public void
 testIncorrectPasswordFormat(){
@@ -19,7 +18,7 @@ LoginSystem loginSystem = new LoginSystem(username,password));
 assertFalse(loginSystem.loginUser(username,password));
 assertEquals("Password is not correctly formatted, please ensure that the password contains at least 8 characters, a capital letter, a number and a special character.",loginSystem.returnLoginStatus());
 }
--password is missing a capital letter 
+
 @Test 
 public void 
 testIncorrectPasswordFormat2(){

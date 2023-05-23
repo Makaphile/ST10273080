@@ -1,0 +1,77 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.UUID;
+
+public class TaskManager {
+    private List<Task> tasks;
+    
+    public TaskManager() {
+        tasks = new ArrayList<>();
+    }
+    
+    public boolean checkTaskDescription(String description) {
+        return description != null && description.length() <= 50;
+    }
+    
+    public String createTaskID() {
+        return UUID.randomUUID().toString();
+    }
+    
+    public String printTaskDetails() {
+        StringBuilder sb = new StringBuilder();
+        for (Task task : tasks) {
+            sb.append(task.toString()).append("\n");
+        }
+        return sb.toString();
+    }
+    
+    public int returnTotalHours() {
+        int totalHours = 0;
+        for (Task task : tasks) {
+            totalHours += task.getHours();
+        }
+        return totalHours;
+    }
+    
+    public void addTask(String description, int hours) {
+        if (checkTaskDescription(description)) {
+            String taskId = createTaskID();
+            Task task = new Task(taskId, description, hours);
+            tasks.add(task);
+        } else {
+            System.out.println("Invalid task description.");
+        }
+    }
+    
+    private class Task {
+        private String id;
+        private String description;
+        private int hours;
+        
+        public Task(String id, String description, int hours) {
+            this.id = id;
+            this.description = description;
+            this.hours = hours;
+        }
+        
+        public String getId() {
+            return id;
+        }
+        
+        public String getDescription() {
+            return description;
+        }
+        
+        public int getHours() {
+            return hours;
+        }
+        
+        public String toString() {
+            return String.format("Task ID: %s, Description: %s, Hours: %d", id, description, hours);
+        }
+    }
+}
+
+
+
+ 

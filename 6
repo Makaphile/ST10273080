@@ -27,11 +27,6 @@ public class TaskList {
         tasks.add(taskNumber + ": " + taskName);
         taskNumber++;
    }
-   Here's a Java program that captures a task description and developer details and checks if the task description is less than 50 characters:
-
-```
-import java.util.Scanner;
-
 public class TaskCapture {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -60,34 +55,22 @@ public class TaskCapture {
       System.out.print("Enter the estimated duration of the task in hours: ");
       double duration = input.nextDouble();
 
-      // Perform calculations using the duration variable as needed
-
       System.out.println("The estimated duration of the task is " + duration + " hours.");
    }
-Here's an example Java program that generates a TaskID using the given format:
-
-```java
 public class TaskIDGenerator {
     public static void main(String[] args) {
         String taskName = "Implement new feature";
         int taskNumber = 13;
         String developerName = "John Smith";
 
-        // Extract first two letters of task name
         String taskNamePrefix = taskName.substring(0, 2);
 
-        // Extract last three letters of developer name
         String developerNameSuffix = developerName.substring(developerName.length() - 3);
 
-        // Generate TaskID string
         String taskID = taskNamePrefix.toUpperCase() + ":" + taskNumber + ":" + developerNameSuffix.toUpperCase();
 
         System.out.println("TaskID: " + taskID);
     }
-Here's an example Java program that prompts the user to select a task status from a menu:
-
-```java
-import java.util.Scanner;
 
 public class TaskStatus {
    public static void main(String[] args) {

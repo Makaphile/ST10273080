@@ -1,0 +1,17 @@
+@Test
+pub;ic void
+testDeveloperArrayPopulated(){
+String[] expectedDevelopers = {"Mike Smith","Edward Harrington","Samantha Paulson","Glenda Oberholzer"};
+assertArrayEquals(expectedDevelopers, developerArray);
+
+@Test
+public void testTask1To4(){
+assertEquals("Glenda Oberholzer,11", developerAssignedToTask[0]);
+}
+
+@Test
+public void
+testDisplayDeveloperAndDuration(){
+String expectedOutput = "Mike Smith, Create Login,6";
+assertEquals(expectedOutput,displayDeveloperAndDuration("Create Login"));
+}

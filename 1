@@ -1,0 +1,59 @@
+import java.util.ArrayList;
+
+public class TaskManager{
+private ArrayList<String> developers;
+private ArrayList<String> taskNames;
+private ArrayList<Integer> taskIds;
+private ArrayList<Integer> taskDurations;
+private ArrayList<String> taskStatuses;
+
+public TaskManager() {
+this.developers = new ArrayList<>();
+this.taskNames = new ArrayLIst<>();
+this.taskIds = new ArrayList<>();
+this.taskDurations = new ArrayList<>();
+this.taskStatuses = new ArrayList<>();
+}
+<>();
+this.taskStatuses = new ArrayList<>();
+}
+
+public void addTask(String developer, String taskName, int taskId, int duration, String status){
+this.developers.add(developer);
+this.taskNames.add(taskName);
+this.taskIds.add(taskId);
+this.taskDurations.add(duration);
+this.taskStatuses.add(status);
+}
+
+public void printTasks(){
+System.out.println("Developers assigned to tasks:");
+for (String developer : this.developers){
+System.out.println(developer);
+}
+System.out.println(\nTask names:");
+for (String taskName : this.taskNames){
+System.out.println(taskName);
+}
+System.out.println("\nTask IDs:");
+for (int taskId : this.taskIds){
+System.out.println(taskId);
+}
+System.out.println("\nTask durations:");
+for (int duration : this.taskDurations){
+System.out.println(duration);
+}
+System.out.println("\nTask statuses:');
+for (String status : this.taskStatuses){
+System.out.println(status);
+}
+}
+
+public static void main(String[] args){
+TaskManager taskManager = new TaskManager();
+taskManager.addTask("John","Implement login functionality",1,10,"In progress");
+taskManager.addTask("Mary","Design database schema",2,8,"Completed"):
+taskManager.addTask("Tom","Write unit tests",3,5,"Not started");
+taskManager.printTasks();
+}
+}
